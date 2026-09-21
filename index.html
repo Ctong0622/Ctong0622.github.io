@@ -1,1 +1,367 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="The personal website of Charles Tong, a Babson College student interested in entrepreneurship, business, and technology."
+		/>
+		<title>Charles Tong | Personal Website</title>
+		<style>
+			:root {
+				--ink: #17202a;
+				--muted: #5f6b76;
+				--paper: #f7f8f5;
+				--white: #ffffff;
+				--accent: #d66b3d;
+				--accent-dark: #a94b27;
+				--line: #dfe4df;
+				--max-width: 1080px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				background: var(--paper);
+				color: var(--ink);
+				font-family: Georgia, "Times New Roman", serif;
+				line-height: 1.6;
+			}
+
+			h1,
+			h2,
+			h3,
+			nav,
+			.button,
+			.eyebrow,
+			footer {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
+
+			a {
+				color: inherit;
+			}
+
+			.container {
+				margin: 0 auto;
+				max-width: var(--max-width);
+				padding: 0 28px;
+			}
+
+			header {
+				border-bottom: 1px solid var(--line);
+				background: rgba(247, 248, 245, 0.96);
+			}
+
+			nav {
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+				min-height: 76px;
+			}
+
+			.brand {
+				font-size: 1.05rem;
+				font-weight: 700;
+				letter-spacing: 0.02em;
+				text-decoration: none;
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 28px;
+				list-style: none;
+			}
+
+			.nav-links a {
+				color: var(--muted);
+				font-size: 0.9rem;
+				text-decoration: none;
+			}
+
+			.nav-links a:hover,
+			.nav-links a:focus {
+				color: var(--accent-dark);
+			}
+
+			.hero {
+				align-items: center;
+				display: grid;
+				min-height: 590px;
+				padding: 96px 0;
+			}
+
+			.hero-content {
+				max-width: 720px;
+			}
+
+			.eyebrow {
+				color: var(--accent-dark);
+				font-size: 0.78rem;
+				font-weight: 700;
+				letter-spacing: 0.13em;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+
+			h1 {
+				font-size: clamp(3.2rem, 8vw, 6.8rem);
+				letter-spacing: -0.06em;
+				line-height: 0.98;
+				max-width: 780px;
+			}
+
+			.hero-text {
+				color: var(--muted);
+				font-size: 1.2rem;
+				margin: 28px 0 34px;
+				max-width: 590px;
+			}
+
+			.button {
+				background: var(--accent);
+				color: var(--white);
+				display: inline-block;
+				font-size: 0.9rem;
+				font-weight: 700;
+				padding: 13px 21px;
+				text-decoration: none;
+			}
+
+			.button:hover,
+			.button:focus {
+				background: var(--accent-dark);
+			}
+
+			section {
+				padding: 100px 0;
+			}
+
+			.section-heading {
+				border-top: 1px solid var(--line);
+				padding-top: 20px;
+			}
+
+			.section-heading h2 {
+				font-size: clamp(2rem, 4vw, 3.2rem);
+				letter-spacing: -0.04em;
+				line-height: 1.1;
+			}
+
+			.about-copy {
+				color: var(--muted);
+				font-size: 1.2rem;
+				margin-left: auto;
+				margin-top: 28px;
+				max-width: 640px;
+			}
+
+			.interests {
+				background: var(--white);
+			}
+
+			.interest-grid {
+				display: grid;
+				gap: 14px;
+				grid-template-columns: repeat(5, 1fr);
+				margin-top: 42px;
+			}
+
+			.interest-card {
+				border: 1px solid var(--line);
+				min-height: 150px;
+				padding: 22px;
+			}
+
+			.interest-card h3 {
+				font-size: 1.05rem;
+				margin-bottom: 12px;
+			}
+
+			.interest-card p {
+				color: var(--muted);
+				font-size: 0.94rem;
+			}
+
+			.contact-content {
+				align-items: end;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 42px;
+			}
+
+			.contact-content p {
+				color: var(--muted);
+				margin-bottom: 8px;
+			}
+
+			.contact-link {
+				color: var(--accent-dark);
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-weight: 700;
+				text-decoration: none;
+			}
+
+			.contact-link:hover,
+			.contact-link:focus {
+				text-decoration: underline;
+			}
+
+			footer {
+				border-top: 1px solid var(--line);
+				color: var(--muted);
+				font-size: 0.85rem;
+				padding: 24px 0;
+			}
+
+			@media (max-width: 760px) {
+				.container {
+					padding: 0 20px;
+				}
+
+				nav {
+					align-items: flex-start;
+					flex-direction: column;
+					gap: 14px;
+					padding: 20px 0;
+				}
+
+				.nav-links {
+					gap: 18px;
+				}
+
+				.hero {
+					min-height: 520px;
+					padding: 72px 0;
+				}
+
+				section {
+					padding: 72px 0;
+				}
+
+				.interest-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				.contact-content {
+					align-items: flex-start;
+					flex-direction: column;
+					gap: 24px;
+				}
+			}
+
+			@media (max-width: 420px) {
+				.interest-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav aria-label="Main navigation">
+					<a class="brand" href="#top">Charles Tong</a>
+					<ul class="nav-links">
+						<li><a href="#about">About</a></li>
+						<li><a href="#interests">Interests</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main id="top">
+			<section class="hero" aria-labelledby="hero-heading">
+				<div class="container">
+					<div class="hero-content">
+						<p class="eyebrow">Babson College student</p>
+						<h1 id="hero-heading">Hi, I'm Charles Tong.</h1>
+						<p class="hero-text">
+							I am interested in entrepreneurship, business, and technology, and I am
+							always curious about how ideas become something real.
+						</p>
+						<a class="button" href="#about">More about me</a>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" aria-labelledby="about-heading">
+				<div class="container">
+					<div class="section-heading">
+						<p class="eyebrow">A little about me</p>
+						<h2 id="about-heading">Curious, practical, and always learning.</h2>
+					</div>
+					<p class="about-copy">
+						I'm a student at Babson College with an interest in the people and ideas
+						behind business. I enjoy learning about entrepreneurship and technology,
+						while making time for golf, travel, and cars.
+					</p>
+				</div>
+			</section>
+
+			<section class="interests" id="interests" aria-labelledby="interests-heading">
+				<div class="container">
+					<div class="section-heading">
+						<p class="eyebrow">What I enjoy</p>
+						<h2 id="interests-heading">My interests</h2>
+					</div>
+					<div class="interest-grid">
+						<article class="interest-card">
+							<h3>Entrepreneurship</h3>
+							<p>Exploring ideas, building things, and understanding what makes them useful.</p>
+						</article>
+						<article class="interest-card">
+							<h3>Business</h3>
+							<p>Learning how thoughtful decisions can create value for people and companies.</p>
+						</article>
+						<article class="interest-card">
+							<h3>Golf</h3>
+							<p>Enjoying a sport that rewards patience, focus, and steady improvement.</p>
+						</article>
+						<article class="interest-card">
+							<h3>Travel</h3>
+							<p>Seeing new places, meeting different people, and gaining fresh perspectives.</p>
+						</article>
+						<article class="interest-card">
+							<h3>Cars</h3>
+							<p>Appreciating the design, engineering, and character behind great cars.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" aria-labelledby="contact-heading">
+				<div class="container">
+					<div class="section-heading">
+						<p class="eyebrow">Get in touch</p>
+						<h2 id="contact-heading">Let's connect.</h2>
+					</div>
+					<div class="contact-content">
+						<div>
+							<p>Email</p>
+							  <a class="contact-link" href="mailto:ctong2@babson.edu">ctong2@babson.edu</a>
+						</div>
+						<div>
+							<p>GitHub</p>
+							<a class="contact-link" href="https://github.com/Ctong0622">github.com/Ctong0622</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">&copy; 2026 Charles Tong</div>
+		</footer>
+	</body>
+</html>
