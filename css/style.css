@@ -1,0 +1,242 @@
+:root {
+  --color-background: #f7f8f5;
+  --color-surface: #ffffff;
+  --color-text: #17202a;
+  --color-muted: #5f6b76;
+  --color-accent: #d66b3d;
+  --color-accent-dark: #a94b27;
+  --color-border: #dfe4df;
+  --content-width: 1080px;
+  --space-section: 6rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+nav,
+.button,
+.eyebrow,
+footer {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 0 28px;
+}
+
+/* Header and navigation */
+
+header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--color-accent-dark);
+}
+
+/* Projects is the main visitor action, so it stands out in the nav */
+.nav-links .nav-primary {
+  background: var(--color-accent);
+  color: var(--color-surface);
+  font-weight: 700;
+  padding: 8px 14px;
+}
+
+.nav-links .nav-primary:hover,
+.nav-links .nav-primary:focus {
+  background: var(--color-accent-dark);
+  color: var(--color-surface);
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  gap: 20px;
+  padding: var(--space-section) 0;
+}
+
+.eyebrow {
+  color: var(--color-accent-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  max-width: 760px;
+}
+
+.hero-text {
+  color: var(--color-muted);
+  font-size: 1.15rem;
+  max-width: 620px;
+}
+
+.button {
+  background: var(--color-accent);
+  color: var(--color-surface);
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 13px 21px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.button:hover,
+.button:focus {
+  background: var(--color-accent-dark);
+}
+
+/* Snapshot section */
+
+.snapshot {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-section) 0;
+}
+
+.snapshot-text {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  max-width: 640px;
+}
+
+.snapshot-text a {
+  color: var(--color-accent-dark);
+  font-weight: 700;
+}
+
+/* Page intro (used at the top of secondary pages, e.g. About Me) */
+
+.page-intro {
+  display: grid;
+  gap: 20px;
+  padding: var(--space-section) 0;
+}
+
+/* Interests */
+
+.interests {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-section) 0;
+}
+
+.interest-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 32px;
+}
+
+.interest-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+}
+
+.interest-card h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.interest-card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* Footer */
+
+footer {
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  padding: 24px 0;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 760px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero,
+  .snapshot,
+  .page-intro,
+  .interests {
+    padding: 3.5rem 0;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+}
