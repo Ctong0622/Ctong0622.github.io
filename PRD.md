@@ -63,7 +63,7 @@ Version 1 will include four pages:
 | Interests: entrepreneurship, business, technology, golf, travel, and cars | Have | Charles Tong |
 | Short personal introduction | Have, needs final wording | Charles Tong |
 | Email address | Have: `ctong2@babson.edu` | Charles Tong |
-| GitHub profile URL | Missing | Charles Tong |
+GitHub profile URL | Have: https://github.com/Ctong0622 | Charles Tong
 | Personal photo | Missing | Charles Tong |
 | Project names | Missing | Charles Tong |
 | Project descriptions | Missing | Charles Tong |
