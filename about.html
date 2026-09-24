@@ -15,7 +15,11 @@
 			<div class="container">
 				<nav aria-label="Main navigation">
 					<a class="brand" href="index.html">Charles Tong</a>
-					<ul class="nav-links">
+					<button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+						<span class="sr-only">Menu</span>
+						<span class="nav-toggle-icon" aria-hidden="true"></span>
+					</button>
+					<ul class="nav-links" id="primary-navigation">
 						<li><a href="about.html" aria-current="page">About Me</a></li>
 						<li><a class="nav-primary" href="projects.html">Projects</a></li>
 						<li><a href="contact.html">Contact</a></li>
@@ -74,5 +78,6 @@
 		<footer>
 			<div class="container">&copy; 2026 Charles Tong</div>
 		</footer>
+		<script src="js/main.js" defer></script>
 	</body>
 </html>
